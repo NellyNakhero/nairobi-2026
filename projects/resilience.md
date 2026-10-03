@@ -14,8 +14,6 @@ Resilience is a Progressive Web App (PWA) that lets a survivor reach verified co
 - **Grants and payouts.** Lightning-based wallet flows, settled to counselors and recipients through M-Pesa in KES.
 - **Safety by design.** Guest mode, one-press Exit with auto-lock, generic push notifications, and honest wording about what "delete" can and cannot do.
 
-Our guiding principle: **use Nostr for signed, encrypted communication, not as a replacement for every database.**
-
 ---
 
 
@@ -96,13 +94,13 @@ We wrote these before the code, because the choices in them are hard to undo lat
 
 | Name | Role | GitHub |
 |---|---|---|
-| Vanessa Kalondu | UI/UX Designer | TODO |
-| Adreen Nyawira Githinji | Frontend Developer | TODO |
-| Wambugu Jane Rose Muthoni | Project Manager and Quality Asurance  | TODO |
-| Nelly Nakhero | Full Stack Developer | TODO |
-| Mona Tanei | Backend and DevOps | TODO |
-| Grace Mugoiri | Backend developer | TODO |
-| Daisy Sawe | Fullstack Developer | TODO |
+| Vanessa Kalondu | UI/UX Designer | Vankalondu |
+| Adreen Nyawira Githinji | Frontend Developer | Adreen-99 |
+| Wambugu Jane Rose Muthoni | Project Manager and Quality Asurance  | Mujojo03 |
+| Nelly Nakhero | Full Stack Developer | nellynakhero |
+| Mona Tanei | Backend and DevOps | ⁠taneiii |
+| Grace Mugoiri | Backend developer | grace-mugoiri |
+| Daisy Sawe | Fullstack Developer | sawe-daisy |
 
 ## Repository & Links
 
@@ -132,8 +130,6 @@ docker compose up --build
 ```
 
 Two relays start at `ws://localhost:7777` and `ws://localhost:7778`. Full setup, tests and troubleshooting are in `backend/README.md`.
-
-To check them, `nc -vz` confirms the port is open, a `curl` upgrade request should return `101 Switching Protocols`, and `websocat` should show a NIP-42 `AUTH` challenge. General Nostr clients such as Primal or Damus can only confirm reachability. They cannot validate NIP-17/44/59 handling or recipient restrictions, so that needs a purpose-built signed test client. Phones cannot reach `localhost` and may reject plain `ws://`, so phone testing needs `wss://`, with each relay's `relay_url` matching its public URL exactly because NIP-42 signs it.
 
 ---
 
